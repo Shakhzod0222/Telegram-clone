@@ -1,0 +1,10 @@
+{
+  "name": "telegram-clone-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix chat-app run dev",
+    "build": "npm --prefix chat-app run build",
+    "lint": "npm --prefix chat-app run lint",
+    "preview": "npm --prefix chat-app run preview"
+  }
+}

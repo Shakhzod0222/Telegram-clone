@@ -1,0 +1,87 @@
+:root {
+  /* Common variables */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+
+  /* Default Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #ebebed;
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.08);
+
+  --text-primary: #1c1c1e;
+  --text-secondary: #707579;
+  --text-muted: #8e8e93;
+
+  --accent-color: #3390ec;
+  --accent-hover: #2b7ecf;
+  --accent-active: #246cb3;
+  --accent-light: rgba(51, 144, 236, 0.12);
+
+  --bubble-out-bg: #eeffde;
+  --bubble-out-text: #000000;
+  --bubble-in-bg: #ffffff;
+  --bubble-in-text: #000000;
+  --bubble-shadow: 0 1px 2px rgba(16, 35, 47, 0.15);
+
+  --border-color: #e5e5ea;
+  --divider-color: #f0f0f2;
+  --chat-wallpaper: #e6ebf0;
+
+  --badge-bg: #3390ec;
+  --badge-text: #ffffff;
+  --badge-muted-bg: #c4c9cc;
+
+  --online-color: #0ac630;
+  --danger-color: #e53935;
+  --pinned-bar-bg: rgba(255, 255, 255, 0.92);
+
+  --modal-overlay: rgba(0, 0, 0, 0.4);
+  --dropdown-bg: #ffffff;
+  --dropdown-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #17212b;
+  --bg-secondary: #0e1621;
+  --bg-tertiary: #242f3d;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.1);
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #708499;
+  --text-muted: #5b6e82;
+
+  --accent-color: #5288c1;
+  --accent-hover: #6398d4;
+  --accent-active: #416f9f;
+  --accent-light: rgba(82, 136, 193, 0.2);
+
+  --bubble-out-bg: #2b5278;
+  --bubble-out-text: #ffffff;
+  --bubble-in-bg: #182533;
+  --bubble-in-text: #f5f5f5;
+  --bubble-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+
+  --border-color: #101921;
+  --divider-color: #101921;
+  --chat-wallpaper: #0e1621;
+
+  --badge-bg: #5288c1;
+  --badge-text: #ffffff;
+  --badge-muted-bg: #4a5968;
+
+  --online-color: #0ac630;
+  --danger-color: #ff595a;
+  --pinned-bar-bg: rgba(23, 33, 43, 0.92);
+
+  --modal-overlay: rgba(0, 0, 0, 0.65);
+  --dropdown-bg: #242f3d;
+  --dropdown-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

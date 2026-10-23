@@ -1,0 +1,143 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition-fast);
+  border-radius: var(--radius-md);
+  margin: 1px 8px;
+  position: relative;
+  text-align: left;
+  width: calc(100% - 16px);
+}
+
+.item:hover {
+  background-color: var(--bg-hover);
+}
+
+.itemActive {
+  background-color: var(--accent-light) !important;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.verifiedBadge {
+  color: var(--accent-color);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.metaArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.time {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.statusIcon {
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.messageRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.snippet {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.senderPrefix {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.typingText {
+  color: var(--accent-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.badgeArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.pinIcon {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.muteIcon {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.unreadBadge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unreadBadgeMuted {
+  background-color: var(--badge-muted-bg);
+}

@@ -1,0 +1,67 @@
+.pinnedBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  background-color: var(--pinned-bar-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.pinnedBar:hover {
+  background-color: var(--bg-hover);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.indicatorLine {
+  width: 3px;
+  height: 32px;
+  background-color: var(--accent-color);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.snippet {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unpinBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.unpinBtn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}

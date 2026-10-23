@@ -1,0 +1,72 @@
+.avatarContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  user-select: none;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.sm {
+  width: 34px;
+  height: 34px;
+  font-size: 0.85rem;
+}
+
+.md {
+  width: 48px;
+  height: 48px;
+  font-size: 1.05rem;
+}
+
+.lg {
+  width: 54px;
+  height: 54px;
+  font-size: 1.25rem;
+}
+
+.xl {
+  width: 80px;
+  height: 80px;
+  font-size: 1.75rem;
+}
+
+.onlineBadge {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--online-color);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.sm .onlineBadge {
+  width: 10px;
+  height: 10px;
+}
+
+.md .onlineBadge {
+  width: 13px;
+  height: 13px;
+}
+
+.lg .onlineBadge {
+  width: 15px;
+  height: 15px;
+}
+
+.xl .onlineBadge {
+  width: 18px;
+  height: 18px;
+}

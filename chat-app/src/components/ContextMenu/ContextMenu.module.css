@@ -1,0 +1,62 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+.menu {
+  position: fixed;
+  background-color: var(--dropdown-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--dropdown-shadow);
+  border: 1px solid var(--border-color);
+  padding: 6px;
+  min-width: 190px;
+  z-index: 1001;
+  animation: scaleIn 0.12s ease-out;
+  user-select: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  text-align: left;
+}
+
+.item:hover {
+  background-color: var(--bg-hover);
+}
+
+.danger {
+  color: var(--danger-color);
+}
+
+.danger:hover {
+  background-color: rgba(229, 57, 53, 0.1);
+}
+
+.reactionRow {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 4px 8px 4px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4px;
+}
+
+.reactionBtn {
+  font-size: 1.3rem;
+  padding: 4px;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-fast);
+}
+
+.reactionBtn:hover {
+  transform: scale(1.3);
+}

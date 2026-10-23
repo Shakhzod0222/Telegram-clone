@@ -1,0 +1,372 @@
+import type { Chat, Message, CurrentUserProfile, User } from '../types/index.ts';
+
+export const CURRENT_USER: CurrentUserProfile = {
+  id: 'user_me',
+  name: 'Shaxzod',
+  username: 'shakhzod_dev',
+  isOnline: true,
+  isVerified: false,
+  bio: 'Fullstack Developer | Building fast reactive apps',
+  phone: '+998 90 123 45 67',
+  theme: 'dark',
+  soundEnabled: true,
+  enterToSend: true,
+};
+
+export const CONTACT_USERS: User[] = [
+  {
+    id: 'user_1',
+    name: 'Alisher Usmonov',
+    username: 'alisher_u',
+    isOnline: true,
+    isVerified: true,
+    lastSeen: 'onlayn',
+    bio: 'Tech Lead @ FinTech',
+    colorIndex: 0,
+  },
+  {
+    id: 'user_2',
+    name: 'Madina Karimova',
+    username: 'madina_k',
+    isOnline: false,
+    isVerified: false,
+    lastSeen: '12:40 da ko\'rildi',
+    bio: 'Product Designer 🎨',
+    colorIndex: 1,
+  },
+  {
+    id: 'user_3',
+    name: 'Javohir Toshmatov',
+    username: 'javohir_t',
+    isOnline: true,
+    isVerified: false,
+    lastSeen: 'onlayn',
+    bio: 'Senior Backend Engineer (Go/Rust)',
+    colorIndex: 2,
+  },
+  {
+    id: 'user_4',
+    name: 'Nilufar Rahimova',
+    username: 'nilufar_r',
+    isOnline: false,
+    isVerified: false,
+    lastSeen: 'kecha 21:15 da',
+    bio: 'QA Engineer',
+    colorIndex: 3,
+  },
+  {
+    id: 'user_5',
+    name: 'BotFather',
+    username: 'botfather',
+    isOnline: true,
+    isVerified: true,
+    isBot: true,
+    lastSeen: 'bot',
+    bio: 'BotFather is the one bot to rule them all.',
+    colorIndex: 4,
+  },
+];
+
+export const INITIAL_CHATS: Chat[] = [
+  {
+    id: 'chat_group_1',
+    type: 'group',
+    title: 'Frontend Developers UZ 🇺🇿',
+    isVerified: true,
+    isPinned: true,
+    unreadCount: 4,
+    memberCount: 2450,
+    onlineCount: 382,
+    pinnedMessageId: 'msg_group_pinned',
+    description: 'O\'zbekiston React, TypeScript va Frontend ustalari hamjamiyati',
+    members: [
+      { userId: 'user_me', name: 'Shaxzod', role: 'admin', joinedAt: Date.now() - 10000000 },
+      { userId: 'user_1', name: 'Alisher Usmonov', role: 'member', joinedAt: Date.now() - 5000000 },
+      { userId: 'user_2', name: 'Madina Karimova', role: 'member', joinedAt: Date.now() - 4000000 },
+      { userId: 'user_3', name: 'Javohir Toshmatov', role: 'member', joinedAt: Date.now() - 3000000 },
+      { userId: 'user_4', name: 'Nilufar Rahimova', role: 'member', joinedAt: Date.now() - 2000000 },
+    ],
+    lastMessage: {
+      id: 'msg_group_last',
+      text: 'Virtual scrolling 1000+ xabarlarda 60fps berar ekan!',
+      timestamp: Date.now() - 1000 * 60 * 3, // 3 mins ago
+      senderName: 'Javohir Toshmatov',
+      senderId: 'user_3',
+      status: 'read',
+    },
+  },
+  {
+    id: 'chat_direct_1',
+    type: 'direct',
+    title: 'Alisher Usmonov',
+    username: 'alisher_u',
+    isVerified: true,
+    isPinned: true,
+    isOnline: true,
+    lastSeen: 'onlayn',
+    unreadCount: 1,
+    lastMessage: {
+      id: 'msg_alisher_last',
+      text: 'Telegram klon loyihasi tayyormi? Kodni tekshirib ko\'ramiz.',
+      timestamp: Date.now() - 1000 * 60 * 12,
+      senderName: 'Alisher Usmonov',
+      senderId: 'user_1',
+      status: 'read',
+    },
+  },
+  {
+    id: 'chat_direct_2',
+    type: 'direct',
+    title: 'Madina Karimova',
+    username: 'madina_k',
+    isVerified: false,
+    isOnline: false,
+    lastSeen: '12:40 da ko\'rildi',
+    unreadCount: 0,
+    lastMessage: {
+      id: 'msg_madina_last',
+      text: 'Yangi Figma dizayn komponentlarini yukladim, ko\'rib bering: https://figma.com',
+      timestamp: Date.now() - 1000 * 60 * 60 * 2,
+      senderName: 'Shaxzod',
+      senderId: 'user_me',
+      isOutgoing: true,
+      status: 'read',
+    },
+  },
+  {
+    id: 'chat_bench',
+    type: 'group',
+    title: '🚀 1000+ Xabarlar Test Guruhi (Performance)',
+    isVerified: false,
+    isPinned: false,
+    unreadCount: 12,
+    memberCount: 5000,
+    onlineCount: 1250,
+    pinnedMessageId: 'msg_bench_pinned',
+    description: 'Virtual scroll va 1000+ xabarlarni silliq renderlash uchun benchmark guruhi',
+    lastMessage: {
+      id: 'msg_bench_last',
+      text: 'Benchmark: 1200 ta xabar yuklandi. Scroll qilib ko\'ring!',
+      timestamp: Date.now() - 1000 * 60 * 1,
+      senderName: 'Alisher Usmonov',
+      senderId: 'user_1',
+      status: 'read',
+    },
+  },
+  {
+    id: 'chat_channel_1',
+    type: 'channel',
+    title: 'Telegram Yangiliklari',
+    username: 'telegram_uz',
+    isVerified: true,
+    unreadCount: 0,
+    memberCount: 142000,
+    description: 'Rasmiy Telegram yangiliklari va yangi versiyalar xulosasi',
+    lastMessage: {
+      id: 'msg_channel_last',
+      text: 'Telegram 10.9 versiyasi chiqdi: Yangi xususiyatlar https://telegram.org/blog',
+      timestamp: Date.now() - 1000 * 60 * 60 * 24,
+      senderName: 'Telegram',
+      senderId: 'telegram_official',
+      status: 'read',
+    },
+  },
+  {
+    id: 'chat_bot_1',
+    type: 'bot',
+    title: 'BotFather',
+    username: 'botfather',
+    isVerified: true,
+    unreadCount: 0,
+    description: 'New bot creation and API token manager',
+    lastMessage: {
+      id: 'msg_bot_last',
+      text: 'Use /newbot command to create a new Telegram bot token.',
+      timestamp: Date.now() - 1000 * 60 * 60 * 48,
+      senderName: 'BotFather',
+      senderId: 'user_5',
+      status: 'read',
+    },
+  },
+];
+
+export const INITIAL_MESSAGES: Record<string, Message[]> = {
+  chat_group_1: [
+    {
+      id: 'msg_group_pinned',
+      chatId: 'chat_group_1',
+      senderId: 'user_1',
+      senderName: 'Alisher Usmonov',
+      senderColorIndex: 0,
+      text: '📌 Eslatma: Barcha a\'zolar yangi React 19 va TypeScript qoidalariga amal qilsin!',
+      timestamp: Date.now() - 1000 * 60 * 60 * 24,
+      status: 'read',
+      isOutgoing: false,
+      isPinned: true,
+    },
+    {
+      id: 'msg_g_1',
+      chatId: 'chat_group_1',
+      senderId: 'user_2',
+      senderName: 'Madina Karimova',
+      senderColorIndex: 1,
+      text: 'Salom barchaga! Telegram Web interfeysi dizayni ustida ishlayapmiz.',
+      timestamp: Date.now() - 1000 * 60 * 30,
+      status: 'read',
+      isOutgoing: false,
+      reactions: [{ emoji: '🔥', count: 3, users: ['user_me', 'user_1', 'user_3'] }],
+    },
+    {
+      id: 'msg_g_2',
+      chatId: 'chat_group_1',
+      senderId: 'user_me',
+      senderName: 'Shaxzod',
+      text: 'Assalomu alaykum! Biz Strict TypeScript, React Context + useReducer va maxsus IndexedDB wrapper ishlatmoqdamiz.',
+      timestamp: Date.now() - 1000 * 60 * 25,
+      status: 'read',
+      isOutgoing: true,
+      reactions: [{ emoji: '👍', count: 4, users: ['user_1', 'user_2', 'user_3', 'user_4'] }],
+    },
+    {
+      id: 'msg_g_3',
+      chatId: 'chat_group_1',
+      senderId: 'user_3',
+      senderName: 'Javohir Toshmatov',
+      senderColorIndex: 2,
+      text: '1000+ xabarlar kelganda brauzer qotib qolmasligi uchun virtual scrolling juda muhim.',
+      timestamp: Date.now() - 1000 * 60 * 15,
+      status: 'read',
+      isOutgoing: false,
+      replyTo: {
+        messageId: 'msg_g_2',
+        senderName: 'Shaxzod',
+        textSnippet: 'Biz Strict TypeScript, React Context + useReducer...',
+      },
+    },
+    {
+      id: 'msg_g_4',
+      chatId: 'chat_group_1',
+      senderId: 'user_4',
+      senderName: 'Nilufar Rahimova',
+      senderColorIndex: 3,
+      text: 'Havolalar avtomatik xavfsiz rel="noopener noreferrer" bilan ochilishi tekshirildi: https://react.dev',
+      timestamp: Date.now() - 1000 * 60 * 8,
+      status: 'read',
+      isOutgoing: false,
+    },
+    {
+      id: 'msg_group_last',
+      chatId: 'chat_group_1',
+      senderId: 'user_3',
+      senderName: 'Javohir Toshmatov',
+      senderColorIndex: 2,
+      text: 'Virtual scrolling 1000+ xabarlarda 60fps berar ekan!',
+      timestamp: Date.now() - 1000 * 60 * 3,
+      status: 'read',
+      isOutgoing: false,
+      reactions: [{ emoji: '🚀', count: 5, users: ['user_me', 'user_1', 'user_2', 'user_4'] }],
+    },
+  ],
+
+  chat_direct_1: [
+    {
+      id: 'msg_alisher_1',
+      chatId: 'chat_direct_1',
+      senderId: 'user_1',
+      senderName: 'Alisher Usmonov',
+      text: 'Salom Shaxzod! Loyiha qanday ketyapti?',
+      timestamp: Date.now() - 1000 * 60 * 60,
+      status: 'read',
+      isOutgoing: false,
+    },
+    {
+      id: 'msg_alisher_2',
+      chatId: 'chat_direct_1',
+      senderId: 'user_me',
+      senderName: 'Shaxzod',
+      text: 'Ajoyib! Barcha Telegram talablari bajarildi: papkalar, sarlavha, guruhdagi ranglar, emoji va virtual scroll.',
+      timestamp: Date.now() - 1000 * 60 * 35,
+      status: 'read',
+      isOutgoing: true,
+    },
+    {
+      id: 'msg_alisher_last',
+      chatId: 'chat_direct_1',
+      senderId: 'user_1',
+      senderName: 'Alisher Usmonov',
+      text: 'Telegram klon loyihasi tayyormi? Kodni tekshirib ko\'ramiz.',
+      timestamp: Date.now() - 1000 * 60 * 12,
+      status: 'read',
+      isOutgoing: false,
+    },
+  ],
+
+  chat_direct_2: [
+    {
+      id: 'msg_madina_1',
+      chatId: 'chat_direct_2',
+      senderId: 'user_2',
+      senderName: 'Madina Karimova',
+      text: 'Yangi ikonkalarni SVG formatda tayyorlab berdim.',
+      timestamp: Date.now() - 1000 * 60 * 180,
+      status: 'read',
+      isOutgoing: false,
+    },
+    {
+      id: 'msg_madina_last',
+      chatId: 'chat_direct_2',
+      senderId: 'user_me',
+      senderName: 'Shaxzod',
+      text: 'Yangi Figma dizayn komponentlarini yukladim, ko\'rib bering: https://figma.com',
+      timestamp: Date.now() - 1000 * 60 * 60 * 2,
+      status: 'read',
+      isOutgoing: true,
+    },
+  ],
+};
+
+/**
+ * Generates 1,200 simulated messages for testing virtual scrolling performance.
+ */
+export function generateBenchmarkMessages(chatId: string, count = 1200): Message[] {
+  const messages: Message[] = [];
+  const baseTime = Date.now() - count * 1000 * 45; // 45 seconds apart
+  const senders = [
+    { id: 'user_me', name: 'Shaxzod', isOutgoing: true },
+    { id: 'user_1', name: 'Alisher Usmonov', isOutgoing: false, colorIndex: 0 },
+    { id: 'user_2', name: 'Madina Karimova', isOutgoing: false, colorIndex: 1 },
+    { id: 'user_3', name: 'Javohir Toshmatov', isOutgoing: false, colorIndex: 2 },
+    { id: 'user_4', name: 'Nilufar Rahimova', isOutgoing: false, colorIndex: 3 },
+  ];
+
+  const phrases = [
+    'Virtual scroll orqali faqat ekranda ko\'rinib turgan xabarlar render qilinadi.',
+    'DOM tugunlari soni kam saqlanadi, bu xotira va CPU yuklamasini kamaytiradi.',
+    'Telegram Web A / Web K aynan shu arxitektura ustiga qurilgan.',
+    'Test xabari: Raqam #',
+    'Havola orqali batafsil tanishish mumkin: https://github.com',
+    'Reaktsiyalar va emoji animatsiyalari silliq ishlayapti 👍',
+    'Strict TypeScript va useReducer bilan state management juda barqaror.',
+  ];
+
+  for (let i = 0; i < count; i++) {
+    const sender = senders[i % senders.length];
+    const phrase = phrases[i % phrases.length];
+    const msgTime = baseTime + i * 1000 * 45;
+
+    messages.push({
+      id: `bench_msg_${i}`,
+      chatId,
+      senderId: sender.id,
+      senderName: sender.name,
+      senderColorIndex: sender.colorIndex,
+      isOutgoing: sender.isOutgoing,
+      text: `${phrase} (ID: ${i + 1} / ${count})`,
+      timestamp: msgTime,
+      status: 'read',
+      reactions: i % 25 === 0 ? [{ emoji: '🔥', count: (i % 7) + 1, users: ['user_1'] }] : undefined,
+    });
+  }
+
+  return messages;
+}
