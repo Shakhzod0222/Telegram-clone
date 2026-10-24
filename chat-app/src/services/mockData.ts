@@ -1,9 +1,11 @@
 import type { Chat, Message, CurrentUserProfile, User } from '../types/index.ts';
+import Avatar from '../assets/profile.jpg'
 
 export const CURRENT_USER: CurrentUserProfile = {
   id: 'user_me',
   name: 'Shakhzod',
   username: 'Shakhzod_Toshturdiev',
+   avatarUrl: Avatar,
   isOnline: true,
   isVerified: false,
   bio: 'Fullstack Developer | Building fast reactive apps',
