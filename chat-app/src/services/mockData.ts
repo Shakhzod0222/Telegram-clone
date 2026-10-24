@@ -2,12 +2,12 @@ import type { Chat, Message, CurrentUserProfile, User } from '../types/index.ts'
 
 export const CURRENT_USER: CurrentUserProfile = {
   id: 'user_me',
-  name: 'Shaxzod',
-  username: 'shakhzod_dev',
+  name: 'Shakhzod',
+  username: 'Shakhzod_Toshturdiev',
   isOnline: true,
   isVerified: false,
   bio: 'Fullstack Developer | Building fast reactive apps',
-  phone: '+998 90 123 45 67',
+  phone: '+998 88 892 22 02',
   theme: 'dark',
   soundEnabled: true,
   enterToSend: true,
